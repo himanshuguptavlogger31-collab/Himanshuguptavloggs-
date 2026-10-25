@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Himanshu Gupta Vloggs - YouTube, Instagram, Facebook aur business email, sab ek jagah.">
-<title>Himanshu Gupta Vloggs</title>
-<style>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Himanshu Gupta Vloggs - YouTube, Instagram, Facebook aur business email, sab ek jagah.">
+  <title>Himanshu Gupta Vloggs</title>
+  <style>
   :root { --bg:#03030a; --ink:#f8f6f1; --muted:#a3a4b5; --orange:#ff6a2b; --amber:#ffc46b; --pink:#ff4fa3; --blue:#3b82f6; --cyan:#22d3ee; --green:#22c55e; --edge:rgba(255,255,255,.14); color-scheme:dark; }
   @property --angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -349,279 +349,459 @@
   footer b { color:var(--ink); }
 
   @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation:none !important; transition:none !important; } }
+
+  /* ===== creator portfolio additions ===== */
+  .portfolio { background:rgba(12,12,22,.82); border:1px solid var(--edge); border-radius:26px; padding:20px 18px; backdrop-filter:blur(16px); box-shadow:0 26px 50px -26px #000; }
+  .portfolio-intro { color:var(--muted); font-size:.88rem; line-height:1.6; margin:-3px 0 14px; }
+  .portfolio-filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .pf-btn { border:1px solid var(--edge); background:rgba(255,255,255,.05); color:var(--ink); padding:8px 12px; border-radius:999px; font-size:.78rem; font-weight:800; cursor:pointer; }
+  .pf-btn.active { color:#080810; background:linear-gradient(120deg,var(--amber),var(--orange)); border-color:transparent; }
+  .portfolio-grid { display:grid; grid-template-columns:1fr; gap:10px; }
+  .portfolio-card { border:1px solid var(--edge); border-radius:18px; padding:15px; background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); }
+  .portfolio-card[hidden] { display:none; }
+  .portfolio-card .pc-icon { font-size:1.55rem; }
+  .portfolio-card h3 { font-size:1rem; margin:7px 0 5px; }
+  .portfolio-card p { font-size:.83rem; line-height:1.55; color:var(--muted); }
+  .portfolio-card a { display:inline-block; margin-top:10px; color:var(--amber); font-size:.82rem; font-weight:800; text-decoration:none; }
+  .collab-bar { margin-top:14px; padding:14px; border-radius:16px; background:rgba(255,106,43,.09); border:1px solid rgba(255,196,107,.25); }
+  .collab-bar p { color:var(--muted); font-size:.82rem; line-height:1.5; margin:5px 0 10px; }
+  .portfolio .act { justify-content:center; }
+  @media (min-width:440px) { .portfolio-grid { grid-template-columns:1fr 1fr; } }
+
+
+  /* Creator Studio expansion */
+  .studio{border:1px solid var(--edge);border-radius:28px;padding:20px 16px;background:linear-gradient(145deg,rgba(255,106,43,.10),rgba(12,12,22,.86) 48%,rgba(59,130,246,.10));box-shadow:0 24px 55px -30px #000;backdrop-filter:blur(18px)}
+  .studio-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:15px}
+  .studio-head h2{font-size:1.25rem;font-weight:900}.studio-head p,.tool-help{color:var(--muted);font-size:.84rem;line-height:1.6;margin-top:5px}
+  .studio-tag{font-size:.72rem;border:1px solid rgba(255,196,107,.35);border-radius:999px;padding:6px 10px;color:var(--amber);white-space:nowrap}
+  .studio-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .tool-card{min-width:0;padding:15px;border-radius:20px;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1)}
+  .tool-card h3{font-size:1rem;font-weight:850;margin-bottom:7px}.tool-card label{display:block;color:var(--muted);font-size:.8rem;margin:10px 0 5px}
+  .tool-card input,.tool-card select,.tool-card textarea,.site-search input{width:100%;min-width:0;border:1px solid var(--edge);border-radius:12px;background:rgba(255,255,255,.06);color:var(--ink);padding:11px 12px;font:inherit;font-size:.9rem;outline:none}
+  .tool-card input:focus,.tool-card select:focus,.tool-card textarea:focus,.site-search input:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(255,196,107,.12)}
+  .tool-card option{background:#10101b;color:#fff}.tool-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .tool-btn{border:1px solid var(--edge);border-radius:12px;background:rgba(255,255,255,.08);color:var(--ink);padding:10px 12px;font-weight:750;font-size:.82rem;cursor:pointer;transition:transform .2s,border-color .2s}
+  .tool-btn:hover{transform:translateY(-1px);border-color:var(--amber)}.tool-btn.primary{background:linear-gradient(120deg,var(--amber),var(--orange));color:#111;border:0}
+  .tool-output{margin-top:11px;border:1px dashed rgba(255,255,255,.18);border-radius:13px;padding:12px;color:var(--ink);font-size:.88rem;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;min-height:42px}
+  .check-list{display:grid;gap:9px;margin-top:12px}.check-row{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;line-height:1.45;color:var(--ink)}.check-row input{width:17px;height:17px;accent-color:var(--orange);margin-top:2px;flex:0 0 auto}
+  .check-progress{height:7px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:12px}.check-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--orange),var(--amber));transition:width .25s}
+  .site-search{display:flex;gap:8px;align-items:center;margin:0 0 12px}.site-search input{flex:1}.search-results{display:flex;flex-wrap:wrap;gap:7px}.search-results a{color:var(--amber);text-decoration:none;border:1px solid var(--edge);border-radius:999px;padding:7px 10px;font-size:.8rem}.search-results a:hover{border-color:var(--amber)}
+  .faq-item{border-top:1px solid var(--edge);padding:12px 0}.faq-item summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}.faq-item summary::after{content:'＋';color:var(--amber)}.faq-item[open] summary::after{content:'−'}.faq-item p{font-size:.88rem;color:var(--muted);line-height:1.7;padding-top:9px}
+  .metric-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.metric{padding:12px;border:1px solid var(--edge);border-radius:15px;background:rgba(255,255,255,.04)}.metric b{display:block;font-size:1.2rem;color:var(--amber)}.metric span{font-size:.75rem;color:var(--muted)}
+  .studio-note{color:var(--muted);font-size:.76rem;line-height:1.5;margin-top:10px}
+  .toast-feature{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:1000;background:#171722;color:#fff;border:1px solid var(--edge);padding:11px 16px;border-radius:999px;box-shadow:0 12px 35px #0008;transition:.25s;font-size:.85rem;max-width:90vw;text-align:center}.toast-feature.show{opacity:1;transform:translate(-50%,0)}
+  @media(min-width:440px){.studio-grid{grid-template-columns:1fr 1fr}.tool-card.wide{grid-column:1/-1}.metric-row{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  @media print{.studio,.to-top,.help-btn,.sfx-btn,.toast-feature{display:none!important}}
+
 </style>
-</head>
-<body>
-
-<div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
-<button class="sfx-btn" id="sfxBtn" aria-label="Sound on/off">🔊</button>
-<div class="fallback" aria-hidden="true"></div>
-<canvas id="gl" aria-hidden="true"></canvas>
-<div class="vignette" aria-hidden="true"></div>
-
-<main class="wrap">
-
-  <section class="hero">
+ </head>
+ <body>
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+  <button class="sfx-btn" id="sfxBtn" aria-label="Sound on/off">🔊</button>
+  <div class="fallback" aria-hidden="true"></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <main class="wrap">
+   <section class="hero">
     <div class="avatar-wrap">
-      <div class="halo"></div>
-      <img class="avatar" src="photo.png" alt="Himanshu Gupta">
-      <span class="status" title="Online"></span>
+     <div class="halo"></div>
+     <img class="avatar" src="photo.png" alt="Himanshu Gupta"> <span class="status" title="Online"></span>
     </div>
     <h1 id="heroName">Himanshu Gupta</h1>
     <div class="greet" id="greet"></div>
     <div class="visit" id="visit"></div>
-    <div><span class="handle" id="handleEl">@himanshuguptavloggs</span>
-    <div class="role"><span id="roleText"></span><i class="role-cursor"></i></div></div>
-    <p class="bio">Vlogger · Travel, life aur kahaniyan camera ke saath.<br>Mere sabhi platforms <em>yahin se</em> access karein.</p>
+    <div>
+     <span class="handle" id="handleEl">@himanshuguptavloggs</span>
+     <div class="role">
+      <span id="roleText"></span><i class="role-cursor"></i>
+     </div>
+    </div>
+    <p class="bio">Vlogger · Travel, life aur kahaniyan camera ke saath.
+     <br>
+     Mere sabhi platforms <em>yahin se</em> access karein.</p>
     <div class="actions">
-      <button class="act sub" id="subBtn" type="button"><span class="bell" id="bell">🔔</span><span id="subLbl">Subscribe karo</span></button>
-      <button class="act" id="shareBtn" type="button">↗ Share</button>
-      <button class="act" id="copyBtn" type="button">📋 Email copy</button>
-      <button class="act" id="vcardBtn" type="button">👤 Contact save karo</button>
-      <button class="act" id="ideaBtn" type="button">🎲 Vlog idea do</button>
-      <button class="act" id="calmBtn" type="button">🌀 Motion off</button>
+     <button class="act sub" id="subBtn" type="button"><span class="bell" id="bell">🔔</span><span id="subLbl">Subscribe karo</span></button>
+     <button class="act" id="shareBtn" type="button">↗ Share</button>
+     <button class="act" id="copyBtn" type="button">📋 Email copy</button>
+     <button class="act" id="vcardBtn" type="button">👤 Contact save karo</button>
+     <button class="act" id="ideaBtn" type="button">🎲 Vlog idea do</button>
+     <button class="act" id="calmBtn" type="button">🌀 Motion off</button>
     </div>
     <div class="mini-toast" id="miniToast" role="status" aria-live="polite"></div>
     <div class="idea" id="ideaBox" aria-live="polite"></div>
-  </section>
-
-  <div class="boy-stage reveal" id="boyStage" title="Click karo">
+   </section>
+   <div class="boy-stage reveal" id="boyStage" title="Click karo">
     <svg class="boy-svg" viewBox="0 -70 240 330" role="img" aria-label="Cartoon vlogger">
-      <defs>
-        <radialGradient id="bglow" cx="50%" cy="45%" r="50%">
-          <stop offset="0%" stop-color="#ff6a2b" stop-opacity=".45"/>
-          <stop offset="100%" stop-color="#ff6a2b" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <circle cx="120" cy="120" r="115" fill="url(#bglow)" class="boy-glow"/>
-      <ellipse class="boy-shadow" cx="120" cy="250" rx="66" ry="8" fill="#000" opacity=".5"/>
-
-      <g class="boy-bob">
-        <!-- waving arm (right side) -->
-        <g class="arm-wave">
-          <path d="M166 150 Q206 124 200 84" stroke="#ff6a2b" stroke-width="22" stroke-linecap="round" fill="none"/>
-          <path d="M166 150 Q206 124 200 84" stroke="#e0521b" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5"/>
-          <circle cx="200" cy="74" r="13" fill="#f2c49b"/>
-          <path d="M193 66 l0 -10 M200 64 l0 -12 M207 66 l0 -10" stroke="#f2c49b" stroke-width="5" stroke-linecap="round"/>
-        </g>
-
-        <!-- torso (hoodie) -->
-        <path d="M78 150 Q120 138 162 150 L170 234 Q120 246 70 234 Z" fill="#ff6a2b"/>
-        <path d="M100 150 Q120 170 140 150" stroke="#e0521b" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <rect x="108" y="206" width="24" height="26" rx="6" fill="#e0521b"/>
-
-        <!-- camera held at chest -->
-        <g class="camera">
-          <rect x="88" y="164" width="62" height="40" rx="9" fill="#11131c" stroke="#3b3f52" stroke-width="2"/>
-          <rect x="90" y="166" width="20" height="8" rx="3" fill="#2a2e3d"/>
-          <circle cx="132" cy="184" r="13" fill="#0a0a12" stroke="#22d3ee" stroke-width="3"/>
-          <circle class="lens" cx="132" cy="184" r="6" fill="#22d3ee"/>
-          <circle cx="129" cy="181" r="2" fill="#fff"/>
-        </g>
-        <!-- left arm (holding camera) -->
-        <path d="M84 158 Q70 186 92 200" stroke="#ff6a2b" stroke-width="20" stroke-linecap="round" fill="none"/>
-        <circle cx="94" cy="202" r="9" fill="#f2c49b"/>
-        <circle cx="152" cy="200" r="9" fill="#f2c49b"/>
+     <defs>
+      <radialGradient id="bglow" cx="50%" cy="45%" r="50%">
+       <stop offset="0%" stop-color="#ff6a2b" stop-opacity=".45" /> <stop offset="100%" stop-color="#ff6a2b" stop-opacity="0" />
+      </radialGradient>
+     </defs>
+     <circle cx="120" cy="120" r="115" fill="url(#bglow)" class="boy-glow" /> <ellipse class="boy-shadow" cx="120" cy="250" rx="66" ry="8" fill="#000" opacity=".5" />
+     <g class="boy-bob">
+      <!-- waving arm (right side) -->
+      <g class="arm-wave">
+       <path d="M166 150 Q206 124 200 84" stroke="#ff6a2b" stroke-width="22" stroke-linecap="round" fill="none" /> <path d="M166 150 Q206 124 200 84" stroke="#e0521b" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5" /> <circle cx="200" cy="74" r="13" fill="#f2c49b" /> <path d="M193 66 l0 -10 M200 64 l0 -12 M207 66 l0 -10" stroke="#f2c49b" stroke-width="5" stroke-linecap="round" />
       </g>
-
-      <!-- head -->
-      <g class="boy-head">
-        <rect x="108" y="122" width="24" height="22" fill="#e0ad80"/>
-        <circle cx="76" cy="96" r="9" fill="#e9b88a"/>
-        <circle cx="164" cy="96" r="9" fill="#e9b88a"/>
-        <ellipse cx="120" cy="92" rx="44" ry="46" fill="#f2c49b"/>
-        <path d="M74 88 Q72 40 120 40 Q168 40 166 88 Q158 66 140 62 Q120 74 104 62 Q86 66 74 88 Z" fill="#1a1a24"/>
-        <path d="M100 46 Q112 28 136 36 Q124 42 116 52 Z" fill="#1a1a24"/>
-        <path d="M94 74 Q104 68 114 74" stroke="#1a1a24" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <path d="M126 74 Q136 68 146 74" stroke="#1a1a24" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <g class="eyes">
-          <ellipse class="pupil" cx="104" cy="90" rx="5.5" ry="7" fill="#1a1a24"/>
-          <ellipse class="pupil" cx="136" cy="90" rx="5.5" ry="7" fill="#1a1a24"/>
-          <circle class="pupil" cx="106" cy="88" r="2" fill="#fff"/>
-          <circle class="pupil" cx="138" cy="88" r="2" fill="#fff"/>
-        </g>
-        <circle cx="94" cy="104" r="6" fill="#ff4fa3" opacity=".35"/>
-        <circle cx="146" cy="104" r="6" fill="#ff4fa3" opacity=".35"/>
-        <path d="M118 98 Q120 104 123 100" stroke="#c9865a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-        <ellipse class="mouth" cx="120" cy="116" rx="9" ry="4" fill="#7a2a2a"/>
-        <path d="M113 115 Q120 111 127 115" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8"/>
+      <!-- torso (hoodie) -->
+      <path d="M78 150 Q120 138 162 150 L170 234 Q120 246 70 234 Z" fill="#ff6a2b" /> <path d="M100 150 Q120 170 140 150" stroke="#e0521b" stroke-width="4" fill="none" stroke-linecap="round" /> <rect x="108" y="206" width="24" height="26" rx="6" fill="#e0521b" /> <!-- camera held at chest -->
+      <g class="camera">
+       <rect x="88" y="164" width="62" height="40" rx="9" fill="#11131c" stroke="#3b3f52" stroke-width="2" /> <rect x="90" y="166" width="20" height="8" rx="3" fill="#2a2e3d" /> <circle cx="132" cy="184" r="13" fill="#0a0a12" stroke="#22d3ee" stroke-width="3" /> <circle class="lens" cx="132" cy="184" r="6" fill="#22d3ee" /> <circle cx="129" cy="181" r="2" fill="#fff" />
       </g>
-
-      <!-- speech bubble -->
-      <g class="boy-bubble">
-        <rect x="8" y="-66" width="224" height="84" rx="16" fill="#ffffff"/>
-        <path d="M108 17 L120 36 L132 17 Z" fill="#ffffff"/>
-        <g font-family="Segoe UI, Noto Sans Devanagari, system-ui, sans-serif" font-weight="800" fill="#0a0a10" text-anchor="middle">
-          <text x="120" y="-40" font-size="13">Hello dosto! 👋</text>
-          <text x="120" y="-22" font-size="11.5">Mera naam Himanshu Gupta hai.</text>
-          <text x="120" y="-4" font-size="11.5">Mujhe follow aur subscribe karo!</text>
-        </g>
+      <!-- left arm (holding camera) -->
+      <path d="M84 158 Q70 186 92 200" stroke="#ff6a2b" stroke-width="20" stroke-linecap="round" fill="none" /> <circle cx="94" cy="202" r="9" fill="#f2c49b" /> <circle cx="152" cy="200" r="9" fill="#f2c49b" />
+     </g>
+     <!-- head -->
+     <g class="boy-head">
+      <rect x="108" y="122" width="24" height="22" fill="#e0ad80" /> <circle cx="76" cy="96" r="9" fill="#e9b88a" /> <circle cx="164" cy="96" r="9" fill="#e9b88a" /> <ellipse cx="120" cy="92" rx="44" ry="46" fill="#f2c49b" /> <path d="M74 88 Q72 40 120 40 Q168 40 166 88 Q158 66 140 62 Q120 74 104 62 Q86 66 74 88 Z" fill="#1a1a24" /> <path d="M100 46 Q112 28 136 36 Q124 42 116 52 Z" fill="#1a1a24" /> <path d="M94 74 Q104 68 114 74" stroke="#1a1a24" stroke-width="4" stroke-linecap="round" fill="none" /> <path d="M126 74 Q136 68 146 74" stroke="#1a1a24" stroke-width="4" stroke-linecap="round" fill="none" />
+      <g class="eyes">
+       <ellipse class="pupil" cx="104" cy="90" rx="5.5" ry="7" fill="#1a1a24" /> <ellipse class="pupil" cx="136" cy="90" rx="5.5" ry="7" fill="#1a1a24" /> <circle class="pupil" cx="106" cy="88" r="2" fill="#fff" /> <circle class="pupil" cx="138" cy="88" r="2" fill="#fff" />
       </g>
+      <circle cx="94" cy="104" r="6" fill="#ff4fa3" opacity=".35" /> <circle cx="146" cy="104" r="6" fill="#ff4fa3" opacity=".35" /> <path d="M118 98 Q120 104 123 100" stroke="#c9865a" stroke-width="2.5" stroke-linecap="round" fill="none" /> <ellipse class="mouth" cx="120" cy="116" rx="9" ry="4" fill="#7a2a2a" /> <path d="M113 115 Q120 111 127 115" stroke="#fff" stroke-width="1.6" fill="none" opacity=".8" />
+     </g>
+     <!-- speech bubble -->
+     <g class="boy-bubble">
+      <rect x="8" y="-66" width="224" height="84" rx="16" fill="#ffffff" /> <path d="M108 17 L120 36 L132 17 Z" fill="#ffffff" /> <g font-family="Segoe UI, Noto Sans Devanagari, system-ui, sans-serif" font-weight="800" fill="#0a0a10" text-anchor="middle"> <text x="120" y="-40" font-size="13">Hello dosto! 👋</text> <text x="120" y="-22" font-size="11.5">Mera naam Himanshu Gupta hai.</text> <text x="120" y="-4" font-size="11.5">Mujhe follow aur subscribe karo!</text> </g>
+     </g>
     </svg>
-  </div>
-
-  <nav class="links" id="linksNav" aria-label="Social links">
-    <a class="tile reveal yt" href="https://www.youtube.com/@himanshuguptavloggs" target="_blank" rel="noopener noreferrer">
-      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></span>
-      <span class="txt"><strong>YouTube</strong><small>Vlogs aur latest videos</small></span><span class="go" aria-hidden="true">→</span>
-    </a>
-    <a class="tile reveal ig" href="https://www.instagram.com/himanshuguptavlogger/" target="_blank" rel="noopener noreferrer">
-      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></span>
-      <span class="txt"><strong>Instagram</strong><small>Daily moments aur reels</small></span><span class="go" aria-hidden="true">→</span>
-    </a>
-    <a class="tile reveal fb" href="https://www.facebook.com/share/1DfbwLbwa6/" target="_blank" rel="noopener noreferrer">
-      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></span>
-      <span class="txt"><strong>Facebook</strong><small>Community aur updates</small></span><span class="go" aria-hidden="true">→</span>
-    </a>
-    <a class="tile reveal ml" href="mailto:himanshuguptavloggs@gmail.com">
-      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
-      <span class="txt"><strong>Business Email</strong><small>himanshuguptavloggs@gmail.com</small></span><span class="go" aria-hidden="true">→</span>
-    </a>
-  </nav>
-
-  <!-- Game: sabse neeche, contained in its own box -->
-  <section class="game reveal" id="game" aria-label="Rock paper scissors">
+   </div>
+   <nav class="links" id="linksNav" aria-label="Social links">
+    <a class="tile reveal yt" href="https://www.youtube.com/@himanshuguptavloggs" target="_blank" rel="noopener noreferrer"> <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z" />
+      </svg>
+     </span> <span class="txt"><strong>YouTube</strong><small>Vlogs aur latest videos</small></span><span class="go" aria-hidden="true">→</span> </a> <a class="tile reveal ig" href="https://www.instagram.com/himanshuguptavlogger/" target="_blank" rel="noopener noreferrer"> <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+       <path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z" />
+      </svg>
+     </span> <span class="txt"><strong>Instagram</strong><small>Daily moments aur reels</small></span><span class="go" aria-hidden="true">→</span> </a> <a class="tile reveal fb" href="https://www.facebook.com/share/1DfbwLbwa6/" target="_blank" rel="noopener noreferrer"> <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+       <path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z" />
+      </svg>
+     </span> <span class="txt"><strong>Facebook</strong><small>Community aur updates</small></span><span class="go" aria-hidden="true">→</span> </a> <a class="tile reveal ml" href="mailto:himanshuguptavloggs@gmail.com"> <span class="ico">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+       <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+     </span> <span class="txt"><strong>Business Email</strong><small>himanshuguptavloggs@gmail.com</small></span><span class="go" aria-hidden="true">→</span> </a>
+   </nav>
+   <!-- Game: sabse neeche, contained in its own box -->
+   <section class="game reveal" id="game" aria-label="Rock paper scissors">
     <div class="game-head">
-      <h2>Rock <span>Paper</span> Scissors</h2>
-      <div class="game-stats">
-        <span>Jeet <b id="wins">0</b></span>
-        <span>Haar <b id="losses">0</b></span>
-        <span>Streak <b id="rpsStreak">0</b></span>
-      </div>
+     <h2>Rock <span>Paper</span> Scissors</h2>
+     <div class="game-stats">
+      <span>Jeet <b id="wins">0</b></span> <span>Haar <b id="losses">0</b></span> <span>Streak <b id="rpsStreak">0</b></span>
+     </div>
     </div>
     <div class="arena">
-      <div class="duel">
-        <div class="side">
-          <div class="hand" id="youHand">❔</div>
-          <small class="who">TUM</small>
-        </div>
-        <div class="vs">VS</div>
-        <div class="side">
-          <img class="opp" src="photo.png" alt="Himanshu Gupta">
-          <div class="hand" id="aiHand">❔</div>
-          <small class="who">HIMANSHU</small>
-        </div>
+     <div class="duel">
+      <div class="side">
+       <div class="hand" id="youHand">❔</div>
+       <small class="who">TUM</small>
       </div>
-      <div class="result" id="result">Apna choice chuno</div>
+      <div class="vs">VS</div>
+      <div class="side">
+       <img class="opp" src="photo.png" alt="Himanshu Gupta">
+       <div class="hand" id="aiHand">❔</div>
+       <small class="who">HIMANSHU</small>
+      </div>
+     </div>
+     <div class="result" id="result">Apna choice chuno</div>
     </div>
     <div class="choices">
-      <button data-c="rock" aria-label="Rock">✊<span>ROCK</span></button>
-      <button data-c="paper" aria-label="Paper">✋<span>PAPER</span></button>
-      <button data-c="scissors" aria-label="Scissors">✌️<span>SCISSORS</span></button>
+     <button data-c="rock" aria-label="Rock">✊<span>ROCK</span></button>
+     <button data-c="paper" aria-label="Paper">✋<span>PAPER</span></button>
+     <button data-c="scissors" aria-label="Scissors">✌️<span>SCISSORS</span></button>
     </div>
     <div class="game-foot">
-      <span>Best streak: <b id="best">0</b></span>
-      <button class="reset" id="reset">↻ Reset</button>
+     <span>Best streak: <b id="best">0</b></span>
+     <button class="reset" id="reset">↻ Reset</button>
     </div>
-  </section>
-
-  <section class="latest reveal" id="latest" aria-label="Latest vlog">
+   </section>
+   <section class="latest reveal" id="latest" aria-label="Latest vlog">
     <div class="contact-title">🎥 Latest vlog</div>
-    <a class="latest-card" id="latestLink" href="https://www.youtube.com/@himanshuguptavloggs" target="_blank" rel="noopener noreferrer">
-      <span class="lt" id="latestTitle">Sabhi vlogs YouTube par dekho</span>
-      <span class="latest-play" aria-hidden="true">▶</span>
-    </a>
-  </section>
-
-  <section class="poll reveal" id="poll" aria-label="Poll">
+    <a class="latest-card" id="latestLink" href="https://www.youtube.com/@himanshuguptavloggs" target="_blank" rel="noopener noreferrer"> <span class="lt" id="latestTitle">Sabhi vlogs YouTube par dekho</span> <span class="latest-play" aria-hidden="true">▶</span> </a>
+   </section>
+   <section class="poll reveal" id="poll" aria-label="Poll">
     <div class="contact-title">🗳️ Aap kaun sa vlog zyada dekhna chahoge?</div>
     <div class="poll-opts" id="pollOpts"></div>
     <div class="contact-note" id="pollNote">Aapka vote is device par save hota hai.</div>
-  </section>
-
-  <section class="contact reveal" id="contact" aria-label="Contact form">
+   </section>
+   <section class="contact reveal" id="contact" aria-label="Contact form">
     <div class="contact-title">📩 Mujhe message bhejo</div>
     <form class="contact-form" id="contactForm">
-      <input type="text" id="cName" placeholder="Aapka naam" maxlength="60" required>
-      <textarea id="cMsg" rows="3" placeholder="Aapka message ya collab idea..." maxlength="800" required></textarea>
-      <button type="submit" class="act">✉️ Message bhejo</button>
+     <input type="text" id="cName" placeholder="Aapka naam" maxlength="60" required> <textarea id="cMsg" rows="3" placeholder="Aapka message ya collab idea..." maxlength="800" required></textarea>
+     <button type="submit" class="act">✉️ Message bhejo</button>
     </form>
     <div class="contact-note">Ye aapke email app mein message khol dega.</div>
-  </section>
-
-  <section class="quick reveal" aria-label="Quick tools">
-    <div class="clock">🕒 Himanshu ka time (IST): <b id="istClock">--:--:--</b></div>
+   </section>
+   <section class="quick reveal" aria-label="Quick tools">
+    <div class="clock">
+     🕒 Himanshu ka time (IST): <b id="istClock">--:--:--</b>
+    </div>
     <div class="jump">
-      <a href="#linksNav">Links</a><a href="#latest">Latest vlog</a><a href="#game">Game</a><a href="#poll">Poll</a><a href="#contact">Contact</a>
+     <a href="#linksNav">Links</a><a href="#latest">Latest vlog</a><a href="#game">Game</a><a href="#poll">Poll</a><a href="#contact">Contact</a>
     </div>
     <div class="tools">
-      <button type="button" class="act" id="likeBtn">❤️ <span id="likeCount">0</span></button>
-      <button type="button" class="act" id="quoteSpeak">🔊 Quote suno</button>
-      <button type="button" class="act" id="fsBtn">⛶ Fullscreen</button>
-      <button type="button" class="act" id="printBtn">🖨️ Print</button>
-      <button type="button" class="act" id="embedBtn">🧩 Embed code</button>
+     <button type="button" class="act" id="likeBtn">❤️ <span id="likeCount">0</span></button>
+     <button type="button" class="act" id="quoteSpeak">🔊 Quote suno</button>
+     <button type="button" class="act" id="fsBtn">⛶ Fullscreen</button>
+     <button type="button" class="act" id="printBtn">🖨️ Print</button>
+     <button type="button" class="act" id="embedBtn">🧩 Embed code</button>
     </div>
     <div class="tools">
-      <button type="button" class="act" id="nightBtn">🌙 Night dim</button>
-      <button type="button" class="act" id="fontUp">A+</button>
-      <button type="button" class="act" id="fontDown">A−</button>
-      <button type="button" class="act" id="randSecBtn">🎲 Random section</button>
-      <button type="button" class="act" id="randLinkBtn">🎯 Random platform</button>
-      <button type="button" class="act" id="coinBtn">🪙 Sikka uchhalo</button>
-      <button type="button" class="act" id="copyQuoteBtn">📋 Quote copy</button>
-      <button type="button" class="act" id="hideGameBtn">🙈 Game chhupao</button>
+     <button type="button" class="act" id="nightBtn">🌙 Night dim</button>
+     <button type="button" class="act" id="fontUp">A+</button>
+     <button type="button" class="act" id="fontDown">A−</button>
+     <button type="button" class="act" id="randSecBtn">🎲 Random section</button>
+     <button type="button" class="act" id="randLinkBtn">🎯 Random platform</button>
+     <button type="button" class="act" id="coinBtn">🪙 Sikka uchhalo</button>
+     <button type="button" class="act" id="copyQuoteBtn">📋 Quote copy</button>
+     <button type="button" class="act" id="hideGameBtn">🙈 Game chhupao</button>
     </div>
-    <div class="clock">⏱️ Vlog timer: <b id="swTime">00:00:00</b></div>
+    <div class="clock">
+     ⏱️ Vlog timer: <b id="swTime">00:00:00</b>
+    </div>
     <div class="tools">
-      <button type="button" class="act" id="swStart">▶ Start</button>
-      <button type="button" class="act" id="swStop">⏸ Pause</button>
-      <button type="button" class="act" id="swReset">↺ Reset</button>
+     <button type="button" class="act" id="swStart">▶ Start</button>
+     <button type="button" class="act" id="swStop">⏸ Pause</button>
+     <button type="button" class="act" id="swReset">↺ Reset</button>
     </div>
     <div class="clock" id="coinRes"></div>
     <div class="clock" id="nextVlog"></div>
-  </section>
-
-  <section class="prefs reveal" aria-label="Mera setup">
+   </section>
+   <section class="prefs reveal" aria-label="Mera setup">
     <div class="contact-title">⚙️ Mera setup</div>
-    <div class="pref-row"><span class="pref-lbl">Accent color</span>
-      <div class="swatches" id="swatches">
-        <button type="button" class="sw" data-c="#ff6a2b" style="--sc:#ff6a2b" aria-label="Orange"></button>
-        <button type="button" class="sw" data-c="#ff4fa3" style="--sc:#ff4fa3" aria-label="Pink"></button>
-        <button type="button" class="sw" data-c="#22d3ee" style="--sc:#22d3ee" aria-label="Cyan"></button>
-        <button type="button" class="sw" data-c="#22c55e" style="--sc:#22c55e" aria-label="Green"></button>
-      </div>
+    <div class="pref-row">
+     <span class="pref-lbl">Accent color</span>
+     <div class="swatches" id="swatches">
+      <button type="button" class="sw" data-c="#ff6a2b" style="--sc:#ff6a2b" aria-label="Orange"></button>
+      <button type="button" class="sw" data-c="#ff4fa3" style="--sc:#ff4fa3" aria-label="Pink"></button>
+      <button type="button" class="sw" data-c="#22d3ee" style="--sc:#22d3ee" aria-label="Cyan"></button>
+      <button type="button" class="sw" data-c="#22c55e" style="--sc:#22c55e" aria-label="Green"></button>
+     </div>
     </div>
-    <div class="pref-row"><span class="pref-lbl">Aaj ka mood</span>
-      <div class="moods" id="moods">
-        <button type="button" class="mood" data-m="😄" aria-label="Khush">😄</button>
-        <button type="button" class="mood" data-m="😎" aria-label="Cool">😎</button>
-        <button type="button" class="mood" data-m="🤩" aria-label="Excited">🤩</button>
-        <button type="button" class="mood" data-m="😴" aria-label="Thaka hua">😴</button>
-        <button type="button" class="mood" data-m="🔥" aria-label="Josh">🔥</button>
-      </div>
+    <div class="pref-row">
+     <span class="pref-lbl">Aaj ka mood</span>
+     <div class="moods" id="moods">
+      <button type="button" class="mood" data-m="😄" aria-label="Khush">😄</button>
+      <button type="button" class="mood" data-m="😎" aria-label="Cool">😎</button>
+      <button type="button" class="mood" data-m="🤩" aria-label="Excited">🤩</button>
+      <button type="button" class="mood" data-m="😴" aria-label="Thaka hua">😴</button>
+      <button type="button" class="mood" data-m="🔥" aria-label="Josh">🔥</button>
+     </div>
     </div>
     <div class="quote" id="quote"></div>
     <div class="streak" id="streak"></div>
     <div class="prefs-foot">
-      <button type="button" class="act" id="resetBtn">🗑️ Mera data reset karo</button>
+     <button type="button" class="act" id="resetBtn">🗑️ Mera data reset karo</button>
     </div>
-  </section>
-
-  <section class="funzone reveal" id="funzone" aria-label="Fun zone">
+   </section>
+   <section class="funzone reveal" id="funzone" aria-label="Fun zone">
     <div class="contact-title">🎉 Fun zone</div>
     <div class="fz-grid">
-      <button type="button" class="act" id="fzRain">🌧️ Emoji rain</button>
-      <button type="button" class="act" id="fzDice">🎲 Dice roll</button>
-      <button type="button" class="act" id="fzLucky">🍀 Lucky number</button>
-      <button type="button" class="act" id="fzComp">💛 Compliment do</button>
-      <button type="button" class="act" id="fzHype">🔥 Hype meter</button>
-      <button type="button" class="act" id="fzTap">👆 Tap counter</button>
-      <button type="button" class="act" id="fzBall">🎱 Magic 8-ball</button>
-      <button type="button" class="act" id="fzHalo">🎨 Halo color</button>
-      <button type="button" class="act" id="fzShake">📳 Shake</button>
-      <button type="button" class="act" id="fzBurst">🎆 Burst</button>
+     <button type="button" class="act" id="fzRain">🌧️ Emoji rain</button>
+     <button type="button" class="act" id="fzDice">🎲 Dice roll</button>
+     <button type="button" class="act" id="fzLucky">🍀 Lucky number</button>
+     <button type="button" class="act" id="fzComp">💛 Compliment do</button>
+     <button type="button" class="act" id="fzHype">🔥 Hype meter</button>
+     <button type="button" class="act" id="fzTap">👆 Tap counter</button>
+     <button type="button" class="act" id="fzBall">🎱 Magic 8-ball</button>
+     <button type="button" class="act" id="fzHalo">🎨 Halo color</button>
+     <button type="button" class="act" id="fzShake">📳 Shake</button>
+     <button type="button" class="act" id="fzBurst">🎆 Burst</button>
     </div>
     <div class="fz-out" id="fzOut"></div>
-    <div class="fz-bar"><i id="fzBar"></i></div>
-  </section>
-
-  <footer class="reveal">© <b>Himanshu Gupta Vloggs</b> · Made with passion ✨</footer>
-</main>
-
-<button class="to-top" id="toTop" aria-label="Upar jao">↑</button>
-<button class="help-btn" id="helpBtn" aria-label="Keyboard shortcuts">?</button>
-<div class="help-modal" id="helpModal" role="dialog" aria-modal="true" aria-label="Shortcuts"><div class="help-box"><b>Keyboard shortcuts</b><div>1 — YouTube</div><div>2 — Instagram</div><div>3 — Facebook</div><div>M — Sound on/off</div><div>R — Random platform</div><div>↑ ↑ ↓ ↓ ← → ← → B A — Secret</div><button type="button" class="act" id="helpClose">Band karo</button></div></div>
-<script>
+    <div class="fz-bar">
+     <i id="fzBar"></i>
+    </div>
+   </section>
+   <section class="portfolio reveal" id="portfolio" aria-label="Creator portfolio">
+    <div class="contact-title">🎬 Creator Portfolio</div>
+    <p class="portfolio-intro">Mere content ke main formats — brands, local businesses aur viewers ke liye ek hi jagah.</p>
+    <div class="portfolio-filters" role="group" aria-label="Content filter">
+     <button class="pf-btn active" type="button" data-filter="all">Sabhi</button>
+     <button class="pf-btn" type="button" data-filter="vlog">Vlogs</button>
+     <button class="pf-btn" type="button" data-filter="short">Shorts &amp; Reels</button>
+     <button class="pf-btn" type="button" data-filter="local">Local stories</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+     <article class="portfolio-card" data-kind="vlog">
+      <div class="pc-icon">📹</div>
+      <h3>Daily Life Vlogs</h3>
+      <p>Rozmarra ki life, real moments aur personal stories ko vlog format mein dikhana.</p>
+      <a href="https://www.youtube.com/@himanshuguptavloggs" target="_blank" rel="noopener noreferrer">YouTube channel dekhein ↗</a>
+     </article>
+     <article class="portfolio-card" data-kind="short">
+      <div class="pc-icon">⚡</div>
+      <h3>Shorts &amp; Reels</h3>
+      <p>Quick moments, highlights aur vertical-video content ke liye social profiles.</p>
+      <a href="https://www.instagram.com/himanshuguptavlogger/" target="_blank" rel="noopener noreferrer">Instagram dekhein ↗</a>
+     </article>
+     <article class="portfolio-card" data-kind="local">
+      <div class="pc-icon">🌄</div>
+      <h3>Village &amp; Local Stories</h3>
+      <p>Local places, events aur aas-paas ki kahaniyon ko audience tak pahunchana.</p>
+      <a href="https://www.facebook.com/share/1DfbwLbwa6/" target="_blank" rel="noopener noreferrer">Facebook dekhein ↗</a>
+     </article>
+     <article class="portfolio-card" data-kind="vlog">
+      <div class="pc-icon">🤝</div>
+      <h3>Brand Collaboration</h3>
+      <p>Product mention, local business feature ya sponsored content ke liye inquiry bhejein.</p>
+      <a href="#contact">Collab ke liye contact ↘</a>
+     </article>
+    </div>
+    <div class="collab-bar">
+     <strong>📄 Creator introduction / media kit</strong>
+     <p>Basic creator profile aur contact details ki shareable file download karein. Audience numbers tabhi add karein jab verified hon.</p>
+     <button class="act sub" id="mediaKitBtn" type="button">⬇ Media kit download</button>
+    </div>
+   </section>
+   <section class="studio reveal" id="creatorStudio" aria-label="Creator Studio tools">
+    <div class="studio-head">
+     <div>
+      <h2>🧰 Creator Studio</h2>
+      <p>Vlog planning, titles, hashtags aur upload checklist — sab isi page par.</p>
+     </div>
+     <span class="studio-tag">LOCAL TOOLS · NO LOGIN</span>
+    </div>
+    <div class="metric-row" aria-label="Portfolio quick facts">
+     <div class="metric">
+      <b>🎬</b><span>Vlogs &amp; daily life</span>
+     </div>
+     <div class="metric">
+      <b>⚡</b><span>Shorts / Reels</span>
+     </div>
+     <div class="metric">
+      <b>📍</b><span>Local stories</span>
+     </div>
+     <div class="metric">
+      <b>🤝</b><span>Collaboration ready</span>
+     </div>
+    </div>
+    <div class="tool-card wide" style="margin-bottom:12px">
+     <h3>🔎 Website quick search</h3>
+     <p class="tool-help">Section ka naam type karo — matching jagah par jump kar sakte ho.</p>
+     <div class="site-search">
+      <input id="siteSearchInput" type="search" placeholder="Try: contact, game, portfolio, tools…" aria-label="Website section search">
+      <button class="tool-btn primary" id="siteSearchBtn" type="button">Search</button>
+     </div>
+     <div class="search-results" id="siteSearchResults" aria-live="polite"></div>
+    </div>
+    <div class="studio-grid">
+     <div class="tool-card">
+      <h3>💡 Vlog title generator</h3>
+      <p class="tool-help">Topic aur vibe choose karke title ideas banao.</p>
+      <label for="vlogTopic">Vlog ka topic</label><input id="vlogTopic" maxlength="90" placeholder="Jaise: village market, college day"> <label for="vlogMood">Vibe</label><select id="vlogMood"><option value="fun">Funny / entertaining</option><option value="real">Real-life / emotional</option><option value="explore">Explore / local story</option><option value="challenge">Challenge / daily vlog</option></select>
+      <div class="tool-actions">
+       <button class="tool-btn primary" id="makeTitles" type="button">✨ Ideas banao</button>
+       <button class="tool-btn" id="copyTitles" type="button">📋 Copy</button>
+      </div>
+      <div class="tool-output" id="titleOutput" aria-live="polite">Tumhare title ideas yahan aayenge.</div>
+     </div>
+     <div class="tool-card">
+      <h3>#️⃣ Hashtag helper</h3>
+      <p class="tool-help">Topic ke hisaab se starter hashtags. Upload se pehle relevant tags hi rakho.</p>
+      <label for="hashTopic">Topic / keywords</label><input id="hashTopic" maxlength="90" placeholder="college vlog, chunar, village"> <label for="hashType">Content type</label><select id="hashType"><option value="vlog">YouTube vlog</option><option value="short">Shorts / Reels</option><option value="local">Local / village story</option><option value="college">College vlog</option></select>
+      <div class="tool-actions">
+       <button class="tool-btn primary" id="makeHashtags" type="button">Generate tags</button>
+       <button class="tool-btn" id="copyHashtags" type="button">📋 Copy</button>
+      </div>
+      <div class="tool-output" id="hashtagOutput" aria-live="polite">#HimanshuGuptaVloggs</div>
+     </div>
+     <div class="tool-card">
+      <h3>📝 Description starter</h3>
+      <p class="tool-help">Video details bharo; ek editable description draft milega.</p>
+      <label for="descTopic">Video ka topic</label><input id="descTopic" maxlength="100" placeholder="Aaj ke vlog mein…"> <label for="descPlace">Location (optional)</label><input id="descPlace" maxlength="70" placeholder="Chunar / Mirzapur"> <label for="descCall">Audience se kya kehna hai?</label><select id="descCall"><option value="comment">Comment mein apni rai batao</option><option value="subscribe">Channel ko subscribe karo</option><option value="share">Video doston ke saath share karo</option></select>
+      <div class="tool-actions">
+       <button class="tool-btn primary" id="makeDescription" type="button">Draft banao</button>
+       <button class="tool-btn" id="copyDescription" type="button">📋 Copy</button>
+      </div>
+      <div class="tool-output" id="descriptionOutput" aria-live="polite">Description draft yahan dikhega.</div>
+     </div>
+     <div class="tool-card">
+      <h3>⏱️ Upload countdown</h3>
+      <p class="tool-help">Apna next upload date/time set karo. Ye browser ke andar calculate hota hai.</p>
+      <label for="uploadDate">Next upload date &amp; time</label><input id="uploadDate" type="datetime-local">
+      <div class="tool-actions">
+       <button class="tool-btn primary" id="setUpload" type="button">Countdown set karo</button>
+       <button class="tool-btn" id="clearUpload" type="button">Clear</button>
+      </div>
+      <div class="tool-output" id="uploadOutput" aria-live="polite">Abhi koi upload countdown set nahi hai.</div>
+     </div>
+     <div class="tool-card wide">
+      <h3>✅ Video upload checklist</h3>
+      <p class="tool-help">Tick ki hui items isi browser/device mein save hongi.</p>
+      <div class="check-list" id="uploadChecklist">
+       <label class="check-row"><input type="checkbox" data-check="footage"> Footage aur audio final check kiya</label> <label class="check-row"><input type="checkbox" data-check="copyright"> Music, clips aur images ke usage rights check kiye</label> <label class="check-row"><input type="checkbox" data-check="title"> Title clear hai aur misleading nahi</label> <label class="check-row"><input type="checkbox" data-check="thumbnail"> Thumbnail mobile screen par readable hai</label> <label class="check-row"><input type="checkbox" data-check="description"> Description, relevant hashtags aur links check kiye</label> <label class="check-row"><input type="checkbox" data-check="privacy"> Private details / location safety check ki</label> <label class="check-row"><input type="checkbox" data-check="captions"> Captions/subtitles aur spelling check ki</label> <label class="check-row"><input type="checkbox" data-check="end"> Final playback dekh kar hi publish karunga</label>
+      </div>
+      <div class="check-progress">
+       <i id="checkProgressBar"></i>
+      </div>
+      <p class="tool-help" id="checkProgressText">0 / 8 complete</p>
+      <div class="tool-actions">
+       <button class="tool-btn" id="resetChecklist" type="button">Reset checklist</button>
+      </div>
+     </div>
+     <div class="tool-card">
+      <h3>📆 7-day vlog planner</h3>
+      <p class="tool-help">Ideas ko apne schedule ke hisaab se edit/copy kar sakte ho.</p>
+      <div class="tool-output" id="weekPlan">Mon — Daily routine / day-in-life Tue — College ya learning day Wed — Local place / market explore Thu — Behind-the-scenes / editing Fri — Q&amp;A ya audience suggestion Sat — Village / family-friendly story Sun — Weekly recap + next-week plan</div>
+      <div class="tool-actions">
+       <button class="tool-btn" id="shufflePlan" type="button">🎲 New order</button>
+       <button class="tool-btn" id="copyPlan" type="button">📋 Copy planner</button>
+      </div>
+     </div>
+     <div class="tool-card">
+      <h3>💰 Collaboration estimator</h3>
+      <p class="tool-help">Apni proposed fee aur deliverables ka rough estimate. Ye quote suggestion hai, guaranteed market rate nahi.</p>
+      <label for="baseFee">Base fee (₹)</label><input id="baseFee" type="number" min="0" max="10000000" value="1000"> <label for="deliverables">Deliverables</label><select id="deliverables"><option value="1">1 deliverable</option><option value="2">2 deliverables</option><option value="3">3 deliverables</option><option value="4">4 deliverables</option></select> <label for="effort">Production effort</label><select id="effort"><option value="1">Basic</option><option value="1.25">Medium</option><option value="1.5">High</option></select>
+      <div class="tool-actions">
+       <button class="tool-btn primary" id="estimateFee" type="button">Estimate</button>
+      </div>
+      <div class="tool-output" id="feeOutput">Estimate yahan dikhega.</div>
+     </div>
+     <div class="tool-card wide">
+      <h3>❓ Creator FAQ</h3>
+      <details class="faq-item">
+       <summary>Brand collaboration kaise request karein?</summary>
+       <p>Contact section se apna naam, business details, campaign goal, deliverables aur deadline bhejein. Password, OTP ya sensitive account details kabhi share na karein.</p>
+      </details>
+      <details class="faq-item">
+       <summary>Kya ye website mere YouTube views live dikhati hai?</summary>
+       <p>Nahi. Live views/subscribers ke liye official API ya trusted backend connection chahiye. Is page par fake stats nahi dikhaye jaate.</p>
+      </details>
+      <details class="faq-item">
+       <summary>Poll aur likes sab visitors ke beech sync honge?</summary>
+       <p>Abhi local browser/device tak limited ho sakte hain. Sab visitors ke votes ya likes ko sync karne ke liye database/backend chahiye.</p>
+      </details>
+      <details class="faq-item">
+       <summary>GitHub Pages par ye tools kaam karenge?</summary>
+       <p>Haan, ye static browser-side tools hain. Local storage aur download jaise features browser support ke hisaab se kaam karte hain; shared database ya email sending ke liye backend/service integration chahiye.</p>
+      </details>
+     </div>
+    </div>
+    <p class="studio-note">Privacy note: planner/checklist browser ke local storage mein save ho sakte hain. Public website par personal details publish karne se pehle check karna.</p>
+   </section>
+   <div class="toast-feature" id="featureToast" role="status" aria-live="polite"></div>
+   <footer class="reveal">
+    © <b>Himanshu Gupta Vloggs</b> · Made with passion ✨
+   </footer>
+  </main>
+  <button class="to-top" id="toTop" aria-label="Upar jao">↑</button>
+  <button class="help-btn" id="helpBtn" aria-label="Keyboard shortcuts">?</button>
+  <div class="help-modal" id="helpModal" role="dialog" aria-modal="true" aria-label="Shortcuts">
+   <div class="help-box">
+    <b>Keyboard shortcuts</b>
+    <div>1 — YouTube</div>
+    <div>2 — Instagram</div>
+    <div>3 — Facebook</div>
+    <div>M — Sound on/off</div>
+    <div>R — Random platform</div>
+    <div>↑ ↑ ↓ ↓ ← → ← → B A — Secret</div>
+    <button type="button" class="act" id="helpClose">Band karo</button>
+   </div>
+  </div>
+  <script>
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $ = function (id) { return document.getElementById(id); };
@@ -1641,6 +1821,66 @@
     burst(innerWidth / 2, innerHeight / 3, 30);
   });
 })();
+
+  /* ---------- creator portfolio: filters + media kit ---------- */
+  var portfolioFilters = document.querySelectorAll('.pf-btn');
+  portfolioFilters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-filter');
+      portfolioFilters.forEach(function (b) { b.classList.toggle('active', b === btn); });
+      document.querySelectorAll('.portfolio-card').forEach(function (card) {
+        card.hidden = filter !== 'all' && card.getAttribute('data-kind') !== filter;
+      });
+      sfxClick();
+    });
+  });
+
+  $('mediaKitBtn').addEventListener('click', function () {
+    sfxClick();
+    var kit = [
+      'HIMANSHU GUPTA — CREATOR PROFILE',
+      '',
+      'Content: Daily-life vlogs, Shorts/Reels, village and local stories.',
+      'YouTube: https://www.youtube.com/@himanshuguptavloggs',
+      'Instagram: https://www.instagram.com/himanshuguptavlogger/',
+      'Facebook: https://www.facebook.com/share/1DfbwLbwa6/',
+      'Business email: himanshuguptavloggs@gmail.com',
+      '',
+      'Collaboration ideas: product mention, local business feature, event coverage.',
+      'Note: Audience statistics and performance metrics are not listed here; share verified analytics separately.'
+    ].join('\\n');
+    var blob = new Blob([kit], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'Himanshu-Gupta-Creator-Media-Kit.txt';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    toastMsg('Media kit download ho rahi hai 📄');
+  });
+
+
+
+  // Creator Studio: standalone browser-side helpers
+  (function(){
+    const byId = id => document.getElementById(id);
+    const safeStore = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+    function featureToast(msg){const el=byId('featureToast');if(!el)return;el.textContent=msg;el.classList.add('show');clearTimeout(featureToast.timer);featureToast.timer=setTimeout(()=>el.classList.remove('show'),2300)}
+    function copyText(value){if(!value||!value.trim()){featureToast('Pehle content generate karo.');return}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(value).then(()=>featureToast('Copied! 📋')).catch(()=>fallbackCopy(value))}else fallbackCopy(value)}
+    function fallbackCopy(value){const t=document.createElement('textarea');t.value=value;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');featureToast('Copied! 📋')}catch(e){featureToast('Text select karke copy kar lo.')}t.remove()}
+    const sectionMap=[['Home','hero'],['Social links','linksNav'],['Rock Paper Scissors','game'],['Latest vlog','latest'],['Poll','poll'],['Contact','contact'],['Quick tools','creatorStudio'],['Preferences','creatorStudio'],['Fun zone','funzone'],['Portfolio','portfolio'],['Creator Studio','creatorStudio']];
+    function runSearch(){const q=(byId('siteSearchInput').value||'').trim().toLowerCase();const out=byId('siteSearchResults');out.innerHTML='';const matches=sectionMap.filter(x=>!q||x[0].toLowerCase().includes(q)||x[1].toLowerCase().includes(q));if(!matches.length){out.textContent='Koi matching section nahi mila.';return}matches.forEach(x=>{const a=document.createElement('a');a.href='#'+x[1];a.textContent=x[0];a.addEventListener('click',()=>{const target=byId(x[1]);if(target)setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),30)});out.appendChild(a)})}
+    byId('siteSearchBtn').addEventListener('click',runSearch);byId('siteSearchInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();runSearch()}});runSearch();
+    const titleTemplates={fun:['{t} 😂 | Aaj To Scene Hi Alag Tha!','{t} 🤣🔥 | Full Masti Wala Vlog','Aaj {t} Mein Kya Ho Gaya?! 😱'],real:['{t} ❤️ | Ek Real Life Vlog','Meri Zindagi Ka Ek Aur Din | {t}','{t} — Kuch Yaadein, Kuch Moments ✨'],explore:['{t} 📍 | Hidden Moments & Local Life','Chalo Explore Karte Hain: {t} 🌄','{t} Ki Asli Kahani | Local Vlog'],challenge:['{t} 🔥 | 100 Days Vlog Challenge','Day In My Life: {t} 💯','{t} — Challenge Continues! 🚀']};
+    byId('makeTitles').addEventListener('click',()=>{const topic=byId('vlogTopic').value.trim()||'Aaj Ka Vlog';const arr=titleTemplates[byId('vlogMood').value].map(t=>t.replaceAll('{t}',topic));byId('titleOutput').textContent=arr.map((t,i)=>(i+1)+'. '+t).join('\n');});byId('copyTitles').addEventListener('click',()=>copyText(byId('titleOutput').textContent));
+    byId('makeHashtags').addEventListener('click',()=>{const raw=byId('hashTopic').value.toLowerCase();const words=raw.normalize('NFKD').replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(Boolean).slice(0,5);const clean=words.map(w=>w.charAt(0).toUpperCase()+w.slice(1));const base=['HimanshuGuptaVloggs','DailyVlog','IndianVlogger'];const extra={vlog:['VlogLife','YouTubeVlog','DailyVlogging'],short:['Shorts','ReelsIndia','ShortVideo'],local:['VillageLife','LocalStories','ExploreIndia'],college:['CollegeVlog','StudentLife','CollegeDays']}[byId('hashType').value];byId('hashtagOutput').textContent=[...new Set([...base,...extra,...clean])].map(w=>'#'+w.replace(/\s/g,'')).join(' ')});byId('copyHashtags').addEventListener('click',()=>copyText(byId('hashtagOutput').textContent));
+    byId('makeDescription').addEventListener('click',()=>{const topic=byId('descTopic').value.trim()||'aaj ke vlog ke moments';const place=byId('descPlace').value.trim();const calls={comment:'Comment mein apni rai zaroor batana 💬',subscribe:'Aise aur vlogs ke liye channel subscribe karna 🔔',share:'Pasand aaye to video apne doston ke saath share karna ❤️'};byId('descriptionOutput').textContent=`Namaste dosto! 🙌\n\nAaj ke vlog mein: ${topic}.${place?' Location: '+place+'.':''}\n\nVideo ko end tak dekho aur ${calls[byId('descCall').value]}.\n\nYouTube: https://www.youtube.com/@himanshuguptavloggs\nInstagram: https://www.instagram.com/himanshuguptavlogger/\n\n#HimanshuGuptaVloggs #DailyVlog #IndianVlogger\n\nNote: Description ko publish karne se pehle apne video ke hisaab se edit kar lena.`});byId('copyDescription').addEventListener('click',()=>copyText(byId('descriptionOutput').textContent));
+    let uploadInterval=null;function refreshUpload(){const raw=safeStore.get('hg_upload_datetime');if(!raw){byId('uploadOutput').textContent='Abhi koi upload countdown set nahi hai.';return}const d=new Date(raw);if(Number.isNaN(d.getTime())){byId('uploadOutput').textContent='Date/time valid nahi hai.';return}const ms=d.getTime()-Date.now();if(ms<=0){byId('uploadOutput').textContent='🎬 Planned upload time aa gaya! Publish se pehle checklist check kar lo.';return}const days=Math.floor(ms/86400000),hrs=Math.floor(ms%86400000/3600000),mins=Math.floor(ms%3600000/60000),secs=Math.floor(ms%60000/1000);byId('uploadOutput').textContent=`${days} din · ${hrs} ghante · ${mins} minute · ${secs} second baaki\nTarget: ${d.toLocaleString()}`}
+    byId('setUpload').addEventListener('click',()=>{const v=byId('uploadDate').value;if(!v||new Date(v)<=new Date()){featureToast('Future date aur time choose karo.');return}safeStore.set('hg_upload_datetime',v);refreshUpload();featureToast('Countdown set ho gaya ⏱️')});byId('clearUpload').addEventListener('click',()=>{safeStore.del('hg_upload_datetime');byId('uploadDate').value='';refreshUpload()});refreshUpload();uploadInterval=setInterval(refreshUpload,1000);
+    const checks=[...document.querySelectorAll('[data-check]')];function refreshChecks(){let n=0;checks.forEach(c=>{c.checked=safeStore.get('hg_check_'+c.dataset.check)==='1';if(c.checked)n++});byId('checkProgressBar').style.width=(n/checks.length*100)+'%';byId('checkProgressText').textContent=`${n} / ${checks.length} complete${n===checks.length?' — ready for final review! 🎉':''}`}checks.forEach(c=>c.addEventListener('change',()=>{safeStore.set('hg_check_'+c.dataset.check,c.checked?'1':'0');refreshChecks()}));byId('resetChecklist').addEventListener('click',()=>{checks.forEach(c=>safeStore.del('hg_check_'+c.dataset.check));refreshChecks();featureToast('Checklist reset ho gayi.')});refreshChecks();
+    const planLines=['Mon — Daily routine / day-in-life','Tue — College ya learning day','Wed — Local place / market explore','Thu — Behind-the-scenes / editing','Fri — Q&A ya audience suggestion','Sat — Village / family-friendly story','Sun — Weekly recap + next-week plan'];function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}byId('shufflePlan').addEventListener('click',()=>{byId('weekPlan').textContent=shuffle([...planLines]).join('\n');featureToast('Planner ideas shuffle ho gaye 🎲')});byId('copyPlan').addEventListener('click',()=>copyText(byId('weekPlan').textContent));
+    byId('estimateFee').addEventListener('click',()=>{const fee=Math.max(0,Math.min(10000000,Number(byId('baseFee').value)||0));const count=Number(byId('deliverables').value)||1;const effort=Number(byId('effort').value)||1;const total=Math.round(fee*count*effort);byId('feeOutput').textContent=`Suggested starting quote: ₹${total.toLocaleString('en-IN')}\nCalculation: ₹${fee.toLocaleString('en-IN')} × ${count} deliverable(s) × ${effort} effort factor.\n\nTravel, revisions, usage rights, exclusivity aur taxes alag se discuss karein. Ye sirf aapke inputs par based estimate hai, market guarantee nahi.`});
+  })();
+
 </script>
-</body>
+ </body>
 </html>
